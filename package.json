@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-firebase-auth",
+  "name": "nuxt-firebase-auth-google-facebook",
   "version": "1.0.0",
   "private": true,
   "scripts": {

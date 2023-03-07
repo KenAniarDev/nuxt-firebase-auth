@@ -14,20 +14,16 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: '' },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-  ],
+  css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -38,7 +34,7 @@ export default {
     '@nuxtjs/vuetify',
   ],
   router: {
-    middleware: ['auth']
+    middleware: ['auth'],
   },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -46,30 +42,31 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    
-      [
-        '@nuxtjs/firebase',
-        {
-          config: {
-              apiKey: "AIzaSyBIpGTddqJVdxjvvS7BrURpcGDpP3zypJE",
-              authDomain: "fir-nuxt-auth-12f4a.firebaseapp.com",
-              projectId: "fir-nuxt-auth-12f4a",
-              storageBucket: "fir-nuxt-auth-12f4a.appspot.com",
-              messagingSenderId: "7425042073",
-              appId: "1:7425042073:web:94dc7a2bf077ff8e9c3a08"
+
+    [
+      '@nuxtjs/firebase',
+      {
+        config: {
+          apiKey: 'AIzaSyCJoE7Ay03Kun07Zu5u7VBPlDzOHEOqdFw',
+          authDomain: 'beinsilence-aaed1.firebaseapp.com',
+          projectId: 'beinsilence-aaed1',
+          storageBucket: 'beinsilence-aaed1.appspot.com',
+          messagingSenderId: '7341417278',
+          appId: '1:7341417278:web:a60ac73e82e140c723826f',
+          measurementId: 'G-3GT3E0RWC6',
+        },
+        services: {
+          auth: {
+            persistence: 'local', // default
+            initialize: {
+              onAuthStateChangedAction: 'onAuthStateChangedAction',
+              subscribeManually: false,
+            },
+            ssr: false,
           },
-          services: {
-            auth: {
-              persistence: 'local', // default
-              initialize: {
-                onAuthStateChangedAction: 'onAuthStateChangedAction',
-                subscribeManually: false
-              },
-              ssr: false,
-            }
-          }
-        }
-      ]
+        },
+      },
+    ],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -78,8 +75,8 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en'
-    }
+      lang: 'en',
+    },
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
@@ -95,13 +92,12 @@ export default {
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
-    }
+          success: colors.green.accent3,
+        },
+      },
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  }
+  build: {},
 }
